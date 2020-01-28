@@ -13,6 +13,5 @@ resource "okta_user_schema" "dob_extension" {
   title  = "Date of Birth"
   type   = "string"
   master = "PROFILE_MASTER"
-  required = true  
 }
 
