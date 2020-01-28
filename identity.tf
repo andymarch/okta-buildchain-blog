@@ -15,3 +15,10 @@ resource "okta_user_schema" "dob_extension" {
   master = "PROFILE_MASTER"
 }
 
+resource "okta_user_schema" "crn_extension" {
+  index  = "customer_reference_number"
+  title  = "Customer Reference Number"
+  type   = "string"
+  master = "PROFILE_MASTER"
+  depends_on = [okta_user_schema.dob_extension]
+}
