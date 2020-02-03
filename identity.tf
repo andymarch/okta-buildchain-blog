@@ -19,6 +19,7 @@ resource "okta_user_schema" "crn_extension" {
   index  = "customer_reference_number"
   title  = "Customer Reference Number"
   type   = "string"
+  required = "true"
   master = "PROFILE_MASTER"
   depends_on = [okta_user_schema.dob_extension]
 }
